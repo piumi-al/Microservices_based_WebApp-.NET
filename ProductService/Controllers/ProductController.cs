@@ -27,7 +27,7 @@ namespace ProductService.Controllers
 
         }
 
-        // GET: api/<CustomerController>
+        // GET: api/<ProductController>
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -36,7 +36,9 @@ namespace ProductService.Controllers
             return Ok(product);
         }
 
-        // GET api/<CustomerController>/5
+
+
+        // GET api/<ProductController>/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -47,8 +49,7 @@ namespace ProductService.Controllers
 
 
 
-
-        // POST api/<CustomerController>
+        // POST api/<ProductController>
         [HttpPost]
         public async Task<IActionResult> Create(Product user)
         {
@@ -58,10 +59,7 @@ namespace ProductService.Controllers
         }
 
 
-
-
-
-         // PUT api/<CustomerController>/5
+        // PUT api/<ProductController>/5
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, Product userUpdate)
         {
@@ -78,9 +76,9 @@ namespace ProductService.Controllers
             }
         }
 
-        
 
-        // DELETE api/<CustomerController>/5
+
+        // DELETE api/<ProductController>/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -93,3 +91,5 @@ namespace ProductService.Controllers
         
     }
 }
+
+

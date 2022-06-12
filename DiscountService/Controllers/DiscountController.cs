@@ -18,7 +18,6 @@ namespace DiscountService.Controllers
     [ApiController]
     public class DiscountController : ControllerBase
     {
-
         private readonly IApplicationDbContext context;
 
         public DiscountController(IApplicationDbContext context)
@@ -26,8 +25,6 @@ namespace DiscountService.Controllers
             this.context = context;
 
         }
-
-
 
         // GET: api/<DiscountController>
         [HttpGet]
