@@ -55,7 +55,7 @@ namespace CartService.Controllers
             this.context.Carts.Add(user);
             await this.context.SaveCartChanges();
             await this.context.SaveCartChanges();
-            return Ok(user.Id);
+            return Ok("insered successfully");
         }
 
 
@@ -72,7 +72,7 @@ namespace CartService.Controllers
             {
                 cart.Quantity = qtyUpdate.Quantity;
                 await this.context.SaveCartChanges();
-                return Ok(cart.Id);
+                return Ok("updated successfully");
             }
         }
 
@@ -81,11 +81,11 @@ namespace CartService.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var product = await this.context.Carts.Where(a => a.Id == id).FirstOrDefaultAsync();
-            if (product == null) return NotFound();
-            this.context.Carts.Remove(product);
+            var cart = await this.context.Carts.Where(a => a.Id == id).FirstOrDefaultAsync();
+            if (cart == null) return NotFound();
+            this.context.Carts.Remove(cart);
             await this.context.SaveCartChanges();
-            return Ok(product.Id);
+            return Ok("Deleted sucessfully");
         }
     
     }

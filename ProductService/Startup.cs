@@ -36,7 +36,7 @@ namespace ProductService
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProductService", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API documentaion Product.Service", Version = "v1" });
             });
         }
 

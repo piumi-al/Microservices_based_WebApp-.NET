@@ -54,7 +54,7 @@ namespace UserService.Controllers
         {
             this.context.Users.Add(user);
             await this.context.SaveUserChanges();
-            return Ok(user.Id);
+            return Ok("inserted successfully");
         }
 
 
@@ -75,7 +75,7 @@ namespace UserService.Controllers
                 user.Address = userUpdate.Address;
                 user.Email = userUpdate.Email;
                 await this.context.SaveUserChanges();
-                return Ok(user.Id);
+                return Ok("updated successfully");
             }
         }
 
@@ -89,7 +89,7 @@ namespace UserService.Controllers
             if (customer == null) return NotFound();
             this.context.Users.Remove(customer);
             await this.context.SaveUserChanges();
-            return Ok(customer.Id);
+            return Ok("deleted successfully");
         }
     }
 }

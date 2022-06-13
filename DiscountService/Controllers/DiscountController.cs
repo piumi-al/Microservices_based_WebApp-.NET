@@ -56,7 +56,7 @@ namespace DiscountService.Controllers
         {
             this.context.Discounts.Add(discount);
             await this.context.SaveDiscountChanges();
-            return Ok(discount.Id);
+            return Ok("Discount added sucessfully!");
         }
 
 
@@ -74,10 +74,9 @@ namespace DiscountService.Controllers
                 discount.end_date = discountUpdate.end_date;
               
                 await this.context.SaveDiscountChanges();
-                return Ok(discount.Id);
+                return Ok("Discount updated sucessfully!");
             }
         }
-
 
 
         // DELETE api/<DiscountController>/5
@@ -88,10 +87,8 @@ namespace DiscountService.Controllers
             if (discount == null) return NotFound();
             this.context.Discounts.Remove(discount);
             await this.context.SaveDiscountChanges();
-            return Ok(discount.Id);
+            return Ok("Discount  deleted sucessfully!");
         }
-
-
 
     }
 }

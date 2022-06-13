@@ -27,7 +27,7 @@ namespace DeliveryService.Controllers
 
         }
 
-        // GET: api/<OrderController>
+        // GET: api/<DeliveryController>
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -36,7 +36,7 @@ namespace DeliveryService.Controllers
             return Ok(deli);
         }
 
-        // GET api/<OrderController>/5
+        // GET api/<DeliveryController>/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -48,20 +48,20 @@ namespace DeliveryService.Controllers
 
 
 
-        // POST api/<OrderController>
+        // POST api/<DeliveryController>
         [HttpPost]
         public async Task<IActionResult> Create(Delivery order)
         {
             this.context.Deliveries.Add(order);
             await this.context.SaveDeliveryChanges();
-            return Ok(order.Id);
+            return Ok("inserted successfully");
         }
 
 
 
 
 
-        // PUT api/<OrderController>/5
+        // PUT api/<DeliveryController>/5
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, Delivery updatedetails)
         {
@@ -72,13 +72,13 @@ namespace DeliveryService.Controllers
                 deli.Delivery_Contact = updatedetails.Delivery_Contact;
                 deli.Delivery_location = updatedetails.Delivery_location;
                 await this.context.SaveDeliveryChanges();
-                return Ok(deli.Id);
+                return Ok("updated successfully");
             }
         }
 
 
 
-        // DELETE api/<OrderController>/5
+        // DELETE api/<DeliveryController>/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -86,7 +86,7 @@ namespace DeliveryService.Controllers
             if (deli == null) return NotFound();
             this.context.Deliveries.Remove(deli);
             await this.context.SaveDeliveryChanges();
-            return Ok(deli.Id);
+            return Ok("Deleted successfully");
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ProductService.Data;
-using ProductService.Entites;
+using ProductService.Entities;
 
 namespace ProductService.Data
 {

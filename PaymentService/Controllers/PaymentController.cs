@@ -59,7 +59,7 @@ namespace PaymentService.Controllers
         {
             this.context.Payments.Add(pay);
             await this.context.SavePaymentChanges();
-            return Ok(pay.Id);
+            return Ok("inserted successfully");
         }
 
 
