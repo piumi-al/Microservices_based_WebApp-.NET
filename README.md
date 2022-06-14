@@ -1,22 +1,22 @@
-# Microservices
+## Microservices
 
-  *User Service
+  * User Service
   
-  *Product Service
+  * Product Service
   
-  *Discount Service
+  * Discount Service
   
-  *Cart Service
+  * Cart Service
   
-  *Payment Service
+  * Payment Service
   
-  *Delivery Service
+  * Delivery Service
 
-# Technologies
+## Technologies
 
-  *.net core 5
+  * .net core 5
   
-  *MySQL
+  * MySQL
   
-  *Ocelot gateway
+  * Ocelot gateway
 
